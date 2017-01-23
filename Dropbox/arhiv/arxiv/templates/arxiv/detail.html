@@ -1,0 +1,13 @@
+<body bgcolor="#00ced1">
+<h1> {{ articles.header }}</h1>
+<ul>
+    {{ articles.body_text }}
+</ul>
+Авторы:
+{% for author in articles.authors.all %}
+{{author.name}} , email: {{author.email}} 
+{% endfor %}
+
+<br><br>
+<h2><a href ='/arxiv/main'> To main page</a></h2>
+</body>

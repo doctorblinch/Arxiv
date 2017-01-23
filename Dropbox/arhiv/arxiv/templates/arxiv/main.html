@@ -1,0 +1,10 @@
+<body bgcolor="#00ced1">
+<h1>Arxiv Site!!! </h1>
+{% for article in articles %}
+   <a href='/arxiv/{{article.id}}'  >{{article.header}} </a> <br> Автор: 
+{% for author in article.authors.all %}
+{{author.name}}
+{% endfor %} 
+<br> <br>
+ {%endfor%}
+</body>
